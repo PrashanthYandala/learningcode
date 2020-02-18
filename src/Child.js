@@ -9,6 +9,7 @@ const Child = props => {
       </h2>
       <form>
         <div>
+          <h2>Hello MR.{props.text}</h2>
           <input
             placeholder="username"
             onChange={props.usernamehandler}

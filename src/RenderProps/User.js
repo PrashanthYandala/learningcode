@@ -1,10 +1,9 @@
 import React, { Component } from "react";
-import ComponentE from "./ComponentE";
 
-class ComponentC extends Component {
+class User extends Component {
   render() {
-    return <ComponentE />;
+    return <React.Fragment>{this.props.render(false)}</React.Fragment>;
   }
 }
 
-export default ComponentC;
+export default User;

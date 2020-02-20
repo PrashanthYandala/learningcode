@@ -1,10 +1,27 @@
 import React, { Component } from "react";
-import ComponentE from "./ComponentE";
 
-class ComponentC extends Component {
+class HoverCounter extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      times: 0
+    };
+  }
+
+  mouseHandler = event => {
+    this.setState(prevState => {
+      return { times: prevState.times + 1 };
+    });
+  };
   render() {
-    return <ComponentE />;
+    const { times } = this.state;
+    return (
+      <React.Fragment>
+        <h2 onMouseOver={this.mouseHandler}>hover{times}</h2>
+      </React.Fragment>
+    );
   }
 }
 
-export default ComponentC;
+export default HoverCounter;

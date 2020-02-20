@@ -18,13 +18,13 @@ class RenderPropsApp extends Component {
       */}
 
         <Counter
-          render={(count, incrementcount) => (
-            <ClickCounter count={count} incrementcount={incrementcount} />
+          render={(count, incrementCount) => (
+            <ClickCounter count={count} incrementCount={incrementCount} />
           )}
         />
         <Counter
-          render={(count, incrementcount) => (
-            <HoverCounter count={count} incrementcount={incrementcount} />
+          render={(count, incrementCount) => (
+            <HoverCounter count={count} incrementCount={incrementCount} />
           )}
         />
       </React.Fragment>

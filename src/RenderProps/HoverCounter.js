@@ -2,10 +2,10 @@ import React, { Component } from "react";
 
 class HoverCounter extends Component {
   render() {
-    const { times } = this.state;
+    const { count, incrementCount } = this.props;
     return (
       <React.Fragment>
-        <h2 onMouseOver={this.mouseHandler}>hover{times}</h2>
+        <h2 onMouseOver={incrementCount}>hover {count}</h2>
       </React.Fragment>
     );
   }

@@ -1,10 +1,25 @@
 import React, { Component } from "react";
-import ComponentE from "./ComponentE";
 
-class ComponentC extends Component {
+class ClickCounter extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      count: 0
+    };
+  }
+
+  incrementHandler = event => {
+    return this.setState(prevState => {
+      return { count: prevState.count + 1 };
+    });
+  };
   render() {
-    return <ComponentE />;
+    const { count } = this.state;
+    return (
+      <button onClick={this.incrementHandler}> Clicked {count} times </button>
+    );
   }
 }
 
-export default ComponentC;
+export default ClickCounter;
